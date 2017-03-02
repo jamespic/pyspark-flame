@@ -1,2 +1,2 @@
-# pyspark-plop
-Use Plop as a profiler in PySpark
+# pyspark-flame
+A low-overhead sampling profiler for PySpark, that outputs Flame Graphs

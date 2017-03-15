@@ -29,6 +29,7 @@ class Collector(object):
 
     def stop(self):
         self.finished.set()
+        self.thread.join()
 
     def run(self):
         results = defaultdict(int)
@@ -61,7 +62,7 @@ class ResultsAccumulator(AccumulatorParam):
 class FlameProfiler(Profiler):
     def __init__(self, ctx):
         conf = dict(ctx._conf.getAll())
-        self.interval = conf.get('pyspark_plop.interval', 0.01)
+        self.interval = float(conf.get('pyspark_flame.interval', 0.05))
         self._accumulator = ctx.accumulator(defaultdict(int), ResultsAccumulator())
 
     def profile(self, func):

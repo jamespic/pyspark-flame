@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='PySpark Flame',
@@ -12,7 +12,5 @@ setup(
     url='https://github.com/jamespic/pyspark-flame',
     packages=find_packages('src'),
     package_dir={'': 'src'},
-    install_requires=[
-        'pyspark'
-    ]
+    test_suite='test'
 )

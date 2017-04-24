@@ -20,8 +20,11 @@ class PysparkFlameTest(unittest.TestCase):
         shutil.rmtree(self.dumpdir)
 
     def test_pyspark_flame(self):
-        conf = SparkConf().set("spark.python.profile", "true").set('pyspark_flame.interval', 0.25)
-        sc = SparkContext('local[*]', 'test', conf=conf, profiler_cls=FlameProfiler)
+        conf = SparkConf().set("spark.python.profile", "true")
+        sc = SparkContext('local[*]', 'test',
+                          conf=conf,
+                          profiler_cls=FlameProfiler,
+                          environment={'pyspark_flame.interval': 0.25})
         sc.parallelize(range(4)).map(wait_a_bit).sum()
         sc.dump_profiles(self.dumpdir)
         dumps = os.listdir(self.dumpdir)

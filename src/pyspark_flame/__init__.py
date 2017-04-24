@@ -61,8 +61,7 @@ class ResultsAccumulator(AccumulatorParam):
 
 class FlameProfiler(Profiler):
     def __init__(self, ctx):
-        conf = dict(ctx._conf.getAll())
-        self.interval = float(conf.get('pyspark_flame.interval', 0.05))
+        self.interval = float(ctx.environment.get('pyspark_flame.interval', 0.05))
         self._accumulator = ctx.accumulator(defaultdict(int), ResultsAccumulator())
 
     def profile(self, func):

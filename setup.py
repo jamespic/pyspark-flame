@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='PySpark Flame',
+    name='pyspark-flame',
     version='0.1.0',
     description='A low-overhead sampling profiler for PySpark, that outputs Flame Graphs',
     author='James Pickering',

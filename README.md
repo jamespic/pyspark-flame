@@ -1,4 +1,6 @@
 # pyspark-flame
+A low-overhead profiler for Spark on Python
+
 Pyspark-flame hooks into Pyspark's existing profiling capabilities to provide a
 low-overhead stack-sampling profiler, that outputs performance data in a
 format compatible with

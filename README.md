@@ -28,7 +28,7 @@ from pyspark_flame import FlameProfiler
 from pyspark import SparkConf, SparkContext
 
 conf = SparkConf().set("spark.python.profile", "true")
-conf = conf.set("spark.python.profile.dump", ".")  # Optional - if not, dumps to stdout
+conf = conf.set("spark.python.profile.dump", ".")  # Optional - if not, dumps to stdout at exit
 sc = SparkContext(
     'local', 'test', conf=conf, profiler_cls=FlameProfiler,
     environment={'pyspark_flame.interval': 0.25}  # Optional - default is 0.2 seconds

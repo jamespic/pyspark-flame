@@ -1,8 +1,12 @@
 # pyspark-flame
-Pyspark-flame hooks into Pyspark's existing profiling machinery to provide a
+Pyspark-flame hooks into Pyspark's existing profiling capabilities to provide a
 low-overhead stack-sampling profiler, that outputs performance data in a
 format compatible with
 [Brendan Gregg's FlameGraph Visualizer](https://github.com/brendangregg/FlameGraph).
+
+Because pyspark-flame hooks into Pyspark's profiling capabilities, it can profile
+the entire execution of an RDD, across the whole of the cluster, and provides
+RDD-level visibility of performance.
 
 Unlike the cProfile-based profiler included with Pyspark, pyspark-flame uses
 stack sampling. It takes stack traces at regular (configurable) intervals,

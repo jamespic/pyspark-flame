@@ -11,7 +11,7 @@ RDD-level visibility of performance.
 Unlike the cProfile-based profiler included with Pyspark, pyspark-flame uses
 stack sampling. It takes stack traces at regular (configurable) intervals,
 which allows its overhead to be low and tunable, and doesn't skew results,
-making it suitable for use in performance test environments.
+making it suitable for use in performance test environments at high volumes.
 
 ## Installation
 

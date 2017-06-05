@@ -9,6 +9,12 @@ stack sampling. It takes stack traces at regular (configurable) intervals,
 which allows its overhead to be low and tunable, and doesn't skew results,
 making it suitable for use in performance test environments.
 
+## Installation
+
+```bash
+pip install pyspark-flame
+```
+
 ## Usage
 
 ```python

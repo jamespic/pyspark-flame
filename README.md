@@ -38,3 +38,10 @@ sc.show_profiles()
 # Or maybe
 sc.dump_profiles('.')
 ```
+
+For convenience, flamegraph.pl is vendored in, so you can produce a flame graph
+with:
+
+```bash
+flamegraph.pl rdd-1.flame > rdd-1.svg
+```

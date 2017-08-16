@@ -71,7 +71,7 @@ class FlameProfiler(Profiler):
             func()
         finally:
             collector.stop()
-            return self._accumulator.add(collector.results)
+            self._accumulator.add(collector.results)
 
     def stats(self):
         return self._accumulator.value

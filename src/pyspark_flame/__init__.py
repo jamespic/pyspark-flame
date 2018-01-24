@@ -52,11 +52,9 @@ class ResultsAccumulator(AccumulatorParam):
         return defaultdict(int)
 
     def addInPlace(self, a, b):
-        result = defaultdict(int)
-        for r in (a, b):
-            for stack, count in r.items():
-                result[stack] += count
-        return result
+        for stack, count in b.items():
+            a[stack] += count
+        return a
 
 
 class FlameProfiler(Profiler):

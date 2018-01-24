@@ -8,14 +8,14 @@ except(IOError, ImportError):
 
 setup(
     name='pyspark-flame',
-    version='0.2.3',
+    version='0.2.4',
     description='A low-overhead sampling profiler for PySpark, that outputs Flame Graphs',
     long_description=long_description,
     author='James Pickering',
     author_email='james_pic@hotmail.com',
     license='MIT',
     url='https://github.com/jamespic/pyspark-flame',
-    download_url='https://github.com/jamespic/pyspark-flame/archive/0.2.2.tar.gz',
+    download_url='https://github.com/jamespic/pyspark-flame/archive/0.2.4.tar.gz',
     packages=find_packages('src'),
     package_dir={'': 'src'},
     scripts=['FlameGraph/flamegraph.pl'],

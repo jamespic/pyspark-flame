@@ -8,7 +8,7 @@ except(IOError, ImportError):
 
 setup(
     name='pyspark-flame',
-    version='0.2.5',
+    version='0.2.6',
     description='A low-overhead sampling profiler for PySpark, that outputs Flame Graphs',
     long_description=long_description,
     author='James Pickering',
